@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	float speed;
-	float jamBar = 1f;
+	float jamBar = 100f;
 	bool isInSafeLane = false;
 	bool isInFastLane = false;
 	Rigidbody2D rigidBody2D;
 	public LayerMask safeLaneLayer;
 	public LayerMask fastLaneLayer;
+	public JamBarScript jamBarScript;
 	// Use this for initialization
 	void Start () {
 		rigidBody2D = GetComponent<Rigidbody2D>();
@@ -19,8 +20,8 @@ public class PlayerScript : MonoBehaviour {
 
 	void FixedUpdate() {
 
-		isInSafeLane = Physics2D.Raycast(transform.position, transform.up, 30f, safeLaneLayer).collider != null;
-		isInFastLane = Physics2D.Raycast(transform.position, transform.up, 30f, fastLaneLayer).collider != null;
+		isInSafeLane = Physics2D.Raycast(transform.position, transform.up, 0.1f, safeLaneLayer).collider != null;
+		isInFastLane = Physics2D.Raycast(transform.position, transform.up, 0.1f, fastLaneLayer).collider != null;
 		
 		if(isInSafeLane)
 		{
@@ -51,7 +52,12 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
+	void Heal(double healAmmount){
+		jamBarScript.SetSize((float)(jamBarScript.actualSize+healAmmount));
+	}
+
 	public void FinishJump(){
 		GetComponent<Animator>().SetBool("isJumping", false);
+		Heal(0.5);
 	}
 }

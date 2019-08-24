@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Source\AudioLoop\LoopableAudio.cs" />
      <Compile Include="Assets\Source\Player\CameraChasePlayerScript.cs" />
+     <Compile Include="Assets\Source\Player\JamBarScript.cs" />
      <Compile Include="Assets\Source\Player\PlayerScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/home/levant/Documents/Repos/Unity/SlimeCrimeLabs/ExtraCreditsGameJam2019/ExtraCreditsGameJam2019/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
