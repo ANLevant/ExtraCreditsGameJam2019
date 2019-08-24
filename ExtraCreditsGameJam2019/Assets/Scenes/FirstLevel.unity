@@ -191,7 +191,7 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 332898263}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 350324e3f0e8c41ca81619a087b64e8e, type: 3}
@@ -71272,6 +71272,9 @@ MonoBehaviour:
   safeLaneLayer:
     serializedVersion: 2
     m_Bits: 256
+  fastLaneLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!95 &1503223473
 Animator:
   serializedVersion: 3

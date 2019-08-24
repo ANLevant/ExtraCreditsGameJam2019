@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	float speed;
+	float jamBar = 1f;
 	bool isInSafeLane = false;
+	bool isInFastLane = false;
 	Rigidbody2D rigidBody2D;
 	public LayerMask safeLaneLayer;
+	public LayerMask fastLaneLayer;
 	// Use this for initialization
 	void Start () {
 		rigidBody2D = GetComponent<Rigidbody2D>();
@@ -16,17 +19,22 @@ public class PlayerScript : MonoBehaviour {
 
 	void FixedUpdate() {
 
-		isInSafeLane = Physics2D.Raycast(transform.position, Vector2.down, 10f, safeLaneLayer).collider != null;
+		isInSafeLane = Physics2D.Raycast(transform.position, transform.up, 30f, safeLaneLayer).collider != null;
+		isInFastLane = Physics2D.Raycast(transform.position, transform.up, 30f, fastLaneLayer).collider != null;
 		
 		if(isInSafeLane)
 		{
 			Debug.Log("Is in safe lane");
 			speed = 2f;
 		}
-		else
+		else if(isInFastLane)
 		{
-			Debug.Log("Is outside safe lane");
+			Debug.Log("Is in fast lane");
 			speed = 5f;
+		}
+		else{
+			Debug.Log("Outside the map");
+			speed = 0f;
 		}
 
 		rigidBody2D.velocity = transform.up * speed;	
