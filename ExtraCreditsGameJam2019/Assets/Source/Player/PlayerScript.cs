@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	float speed;
-	public bool isInSafeLane = false;
-	public bool isInFastLane = false;
+	public bool isInSafeLane;
+	public bool isInFastLane;
+	public bool isInChallengeRoom;
 	Rigidbody2D rigidBody2D;
 	public LayerMask safeLaneLayer;
 	public LayerMask fastLaneLayer;
+	public LayerMask challengeRoomLayer;
 	public JamBarScript jamBarScript;
 	// Use this for initialization
 	void Start () {
@@ -20,12 +22,13 @@ public class PlayerScript : MonoBehaviour {
 
 		isInSafeLane = Physics2D.Raycast(transform.position, transform.up, 0.1f, safeLaneLayer).collider != null;
 		isInFastLane = Physics2D.Raycast(transform.position, transform.up, 0.1f, fastLaneLayer).collider != null;
+		isInChallengeRoom = Physics2D.Raycast(transform.position, transform.up, 0.1f, challengeRoomLayer).collider != null;
 		
 		if(isInSafeLane)
 		{
 			speed = 2f;
 		}
-		else if(isInFastLane)
+		else if(isInFastLane || isInChallengeRoom)
 		{
 			speed = 5f;
 		}
@@ -44,6 +47,10 @@ public class PlayerScript : MonoBehaviour {
 		if(Input.GetButton("Jump")){
 			GetComponent<Animator>().SetBool("isJumping", true);
 		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D other) {
+		
 	}
 
 	void Heal(double healAmmount){

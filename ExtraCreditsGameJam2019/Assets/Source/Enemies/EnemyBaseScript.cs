@@ -15,18 +15,27 @@ public class EnemyBaseScript : MonoBehaviour {
 
 	// Use this for initialization
 	public void Start () {
-	}
-
-	private void OnCollisionEnter2D(Collision2D other) {
+		hitPoints = 3;
 	}
 	
 	// Update is called once per frame
 	public void Update () {
+		if(hitPoints <= 0)
+		{
+			Destroy(this.gameObject);
+		}
 		if(!isFiring){
 			StartCoroutine(Fire());
 		}
 		if(Vector2.Distance(player.transform.position, transform.position) > 10 && !isStatic){
 			Destroy(this.gameObject);
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D other) {
+		Debug.Log("Collide! "+other.gameObject.tag);
+		if(other.gameObject.tag == "Bullet"){
+			hitPoints--;
 		}
 	}
 

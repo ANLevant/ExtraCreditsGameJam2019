@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - SafeLane
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - SafeLane
   - FastLane
-  - 
+  - ChallengeRoom
   - 
   - 
   - 
