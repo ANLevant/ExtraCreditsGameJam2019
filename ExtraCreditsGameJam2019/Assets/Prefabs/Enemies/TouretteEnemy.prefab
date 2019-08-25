@@ -50,7 +50,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061341433444088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4501060317710430}
@@ -81,11 +81,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3451add57e4eb49e0bea2c8a9ba34e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 1260852601679366, guid: 2039efe8a43c84c489c33ef93172cf0c, type: 2}
   bulletCount: 3
   hitPoints: 3
   fireRate: 0.3
-  playerScript: {fileID: 0}
+  player: {fileID: 0}
+  isStatic: 0
 --- !u!212 &212833365122883312
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,16 +7,14 @@ public class EnemyBaseScript : MonoBehaviour {
 	public GameObject bullet;
 	public int bulletCount;
 	public int hitPoints;
-
 	public float fireRate;
 	private float timeCounter;
-	public PlayerScript playerScript;
-
 	private bool isFiring;
+	public PlayerScript player;
+	public bool isStatic;
 
 	// Use this for initialization
 	public void Start () {
-		
 	}
 
 	private void OnCollisionEnter2D(Collision2D other) {
@@ -27,7 +25,9 @@ public class EnemyBaseScript : MonoBehaviour {
 		if(!isFiring){
 			StartCoroutine(Fire());
 		}
-		
+		if(Vector2.Distance(player.transform.position, transform.position) > 10 && !isStatic){
+			Destroy(this.gameObject);
+		}
 	}
 
 	IEnumerator Fire(){

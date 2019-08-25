@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	float speed;
-	bool isInSafeLane = false;
-	bool isInFastLane = false;
+	public bool isInSafeLane = false;
+	public bool isInFastLane = false;
 	Rigidbody2D rigidBody2D;
 	public LayerMask safeLaneLayer;
 	public LayerMask fastLaneLayer;

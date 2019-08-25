@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Source\AudioLoop\LoopableAudio.cs" />
      <Compile Include="Assets\Source\Enemies\EnemyBaseScript.cs" />
+     <Compile Include="Assets\Source\Enemies\LevelControlScript.cs" />
      <Compile Include="Assets\Source\Enemies\SpiralBullet.cs" />
      <Compile Include="Assets\Source\Enemies\Tourette.cs" />
      <Compile Include="Assets\Source\Player\CameraChasePlayerScript.cs" />

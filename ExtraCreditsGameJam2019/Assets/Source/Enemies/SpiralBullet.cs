@@ -16,6 +16,12 @@ public class SpiralBullet : MonoBehaviour {
 		rigidBody2D = GetComponent<Rigidbody2D>();
 		bulletRenderer = GetComponent<Renderer>();
 	}
+
+	private void OnCollisionEnter2D(Collision2D other) {
+		if(other.gameObject.tag == "SafeLane"){
+			Destroy(this.gameObject.transform.parent.gameObject);
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
