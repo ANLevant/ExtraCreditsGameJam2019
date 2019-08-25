@@ -14,8 +14,7 @@ public class PlayerScript : MonoBehaviour {
 	public JamBarScript jamBarScript;
 	// Use this for initialization
 	void Start () {
-		rigidBody2D = GetComponent<Rigidbody2D>();
-		
+		rigidBody2D = GetComponent<Rigidbody2D>();		
 	}
 
 	void FixedUpdate() {
@@ -25,16 +24,13 @@ public class PlayerScript : MonoBehaviour {
 		
 		if(isInSafeLane)
 		{
-			Debug.Log("Is in safe lane");
 			speed = 2f;
 		}
 		else if(isInFastLane)
 		{
-			Debug.Log("Is in fast lane");
 			speed = 5f;
 		}
 		else{
-			Debug.Log("Outside the map");
 			speed = 0f;
 		}
 
@@ -47,7 +43,6 @@ public class PlayerScript : MonoBehaviour {
 			transform.Rotate(0,0, -5f*Input.GetAxis("Horizontal"));
 		}
 		if(Input.GetButton("Jump")){
-			Debug.Log("Jumping!");
 			GetComponent<Animator>().SetBool("isJumping", true);
 		}
 	}
