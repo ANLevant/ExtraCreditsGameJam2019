@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	float speed;
-	float jamBar = 100f;
 	bool isInSafeLane = false;
 	bool isInFastLane = false;
 	Rigidbody2D rigidBody2D;
