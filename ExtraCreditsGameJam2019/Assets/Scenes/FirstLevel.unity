@@ -71131,7 +71131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4501060317710430, guid: b5a67fc053ea248a1a5c777caecf09a9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4501060317710430, guid: b5a67fc053ea248a1a5c777caecf09a9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -71172,6 +71172,10 @@ Prefab:
         type: 2}
       propertyPath: bulletCount
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263212566582578, guid: b5a67fc053ea248a1a5c777caecf09a9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5a67fc053ea248a1a5c777caecf09a9, type: 2}

@@ -6,8 +6,6 @@ public class SpiralBullet : MonoBehaviour {
 
 	float xOscilation;
 	float circleSpeed = 7f;
-	float circleSize = 1f;
-	float circleGrowSpeed = 0.1f;
 	private float spiralTurnVariable = 1;
 	Rigidbody2D rigidBody2D;
 
