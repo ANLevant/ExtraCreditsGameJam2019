@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class ChaserScript : EnemyBaseScript {
 
+	public Sprite  Damage2;
+	public Sprite  Damage1;
+	private GameObject enemySprite;
+
 	float speed = 7f;
+
+	new public void Start(){
+		base.Start();
+		enemySprite = transform.Find("Enemy").gameObject;
+	}
 	// Update is called once per frame
 	new public void Update () {
 		base.Update();
+		if(hitPoints == 2){
+			enemySprite.GetComponent<SpriteRenderer>().sprite = Damage2;
+		}
+		if(hitPoints == 1){
+			enemySprite.GetComponent<SpriteRenderer>().sprite = Damage1;
+		}
 		RotateTowards();
 
 		if(Vector2.Distance(player.transform.position, transform.position) > 3){
