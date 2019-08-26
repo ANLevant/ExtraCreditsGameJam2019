@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour {
 	public JamBarScript jamBarScript;
 	private GameObject playerSprite;
 	public Sprite  Damage2;
-	public Sprite  Damage3;
+	public Sprite  Damage1;
 	public int health =3;	
 
 	// Use this for initialization
@@ -62,11 +62,11 @@ public class PlayerScript : MonoBehaviour {
 			health--;
 		}
 		if(health == 2){
-			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage3;
+			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage2;
 	
 		}
-		if(health == 3){
-			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage2;
+		if(health == 1){
+			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage1;
 	
 		}
 	}
