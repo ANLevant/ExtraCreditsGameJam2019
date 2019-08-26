@@ -10,6 +10,7 @@ public abstract class EnemyBaseScript : MonoBehaviour {
 	public float fireRate;
 	public PlayerScript player;
 	public bool isStatic;
+	public List<GameObject> dropableList;
 
 	protected Rigidbody2D rigidBody2D;
 	protected float timeCounter;
@@ -52,6 +53,9 @@ public abstract class EnemyBaseScript : MonoBehaviour {
 			isInvinsible = true;
 		}
 		else if(other.gameObject.tag == "SafeLane"){
+			for(int i = 0; i < dropableList.Count; i++){
+				Instantiate(dropableList[i], transform.position, Quaternion.identity);
+			}
 			Destroy(this.gameObject);
 		}
 	}

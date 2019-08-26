@@ -78,6 +78,10 @@ public class PlayerScript : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag=="Bullet" && ! isJumping && !isInvinsible){
+			Heal(0.3);
+			isInvinsible = true;
+		}
+		if(other.gameObject.tag=="Jam" && ! isJumping){
 			health--;
 			isInvinsible = true;
 		}
@@ -100,6 +104,5 @@ public class PlayerScript : MonoBehaviour {
 	public void FinishJump(){
 		GetComponent<Animator>().SetBool("isJumping", false);
 		isJumping = false;
-		Heal(0.5);
 	}
 }

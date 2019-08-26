@@ -134,6 +134,8 @@ MonoBehaviour:
   fireRate: 0.3
   player: {fileID: 0}
   isStatic: 0
+  dropableList:
+  - {fileID: 1107272930924774, guid: 00f659a41c0184785a32cf522c384a08, type: 2}
   Damage1: {fileID: 21300002, guid: 43a7179516ce84af29d88122e370e99f, type: 3}
 --- !u!212 &212833365122883312
 SpriteRenderer:
