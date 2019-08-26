@@ -134,6 +134,7 @@ MonoBehaviour:
   fireRate: 3
   player: {fileID: 0}
   isStatic: 0
+  Damage3: {fileID: 21300010, guid: ce381043acc8f411c8942026e14ac62a, type: 3}
   Damage2: {fileID: 21300012, guid: ce381043acc8f411c8942026e14ac62a, type: 3}
   Damage1: {fileID: 21300014, guid: ce381043acc8f411c8942026e14ac62a, type: 3}
 --- !u!212 &212754424998784482

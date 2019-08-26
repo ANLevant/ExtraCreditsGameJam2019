@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChaserScript : EnemyBaseScript {
 
+	public Sprite  Damage3;
 	public Sprite  Damage2;
 	public Sprite  Damage1;
 	private GameObject enemySprite;
@@ -17,6 +18,9 @@ public class ChaserScript : EnemyBaseScript {
 	// Update is called once per frame
 	new public void Update () {
 		base.Update();
+		if(hitPoints == 3){
+			enemySprite.GetComponent<SpriteRenderer>().sprite = Damage3;
+		}
 		if(hitPoints == 2){
 			enemySprite.GetComponent<SpriteRenderer>().sprite = Damage2;
 		}
