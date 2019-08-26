@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 010036c4f474f476cb1d827d8ec0939b
+guid: 8b89dd3bfdcfd4a9e84382350d609149
 TextureImporter:
   fileIDToRecycleName:
-    21300000: fire tile sprite sheet2_0
-    21300002: fire tile sprite sheet2_1
-    21300004: fire tile sprite sheet2_2
-    21300006: fire tile sprite sheet2_3
-    21300008: fire tile sprite sheet2_4
+    21300000: fire tile sprite sheet2 (16x16)_0
+    21300002: fire tile sprite sheet2 (16x16)_1
+    21300004: fire tile sprite sheet2 (16x16)_2
+    21300006: fire tile sprite sheet2 (16x16)_3
+    21300008: fire tile sprite sheet2 (16x16)_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -36,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fire tile sprite sheet2_0
+      name: fire tile sprite sheet2 (16x16)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,13 +136,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a64c3d5c8cf7b4047a1170465a41c281
+      spriteID: 9bbdc50f476ae47be985272e22288380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire tile sprite sheet2_1
+      name: fire tile sprite sheet2 (16x16)_1
       rect:
         serializedVersion: 2
         x: 16
@@ -156,13 +156,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ec4d0c04de4f4296b24603dfd1a62e2
+      spriteID: 8670bd164be254777acf066b1562d3d6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire tile sprite sheet2_2
+      name: fire tile sprite sheet2 (16x16)_2
       rect:
         serializedVersion: 2
         x: 32
@@ -176,13 +176,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f8c4f47ce73d47a7b92e634d2a29a1a
+      spriteID: fb8b4e3f8bd9b4038a95716e354a6797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire tile sprite sheet2_3
+      name: fire tile sprite sheet2 (16x16)_3
       rect:
         serializedVersion: 2
         x: 48
@@ -196,13 +196,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30b23f0c424a24cc79824134d6230ee7
+      spriteID: d80351381a6ec4390ba217eaad7f8770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire tile sprite sheet2_4
+      name: fire tile sprite sheet2 (16x16)_4
       rect:
         serializedVersion: 2
         x: 64
@@ -216,7 +216,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aacef0824d9b48a8b6a85d727d89990
+      spriteID: 45c3357aab34e402eaf46876d393261a
       vertices: []
       indices: 
       edges: []
@@ -224,7 +224,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 22b9f75e190eb4f81a15efb01a55f8a1
+    spriteID: 29214808ae68c48898241092518c969b
     vertices: []
     indices: 
     edges: []
