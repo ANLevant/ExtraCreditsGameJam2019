@@ -8,11 +8,16 @@ public abstract class EnemyBaseScript : MonoBehaviour {
 	public int bulletCount;
 	public int hitPoints;
 	public float fireRate;
-	protected float timeCounter;
-	protected bool isFiring;
 	public PlayerScript player;
 	public bool isStatic;
+
 	protected Rigidbody2D rigidBody2D;
+	protected float timeCounter;
+	protected bool isFiring;
+
+	private bool isInvinsible;
+	private float invinsibleCounter;
+	private float invinsibilityLapse = 1f;
 
 	// Use this for initialization
 	public void Start () {
@@ -32,11 +37,19 @@ public abstract class EnemyBaseScript : MonoBehaviour {
 		if(Vector2.Distance(player.transform.position, transform.position) > 10 && !isStatic){
 			Destroy(this.gameObject);
 		}
+		if(isInvinsible){
+			invinsibleCounter += Time.deltaTime;
+		}
+		if(invinsibleCounter >= invinsibilityLapse){
+			invinsibleCounter = 0;
+			isInvinsible = false;
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag == "Bullet"){
+		if(other.gameObject.tag == "Bullet" && !isInvinsible){
 			hitPoints--;
+			isInvinsible = true;
 		}
 		else if(other.gameObject.tag == "SafeLane"){
 			Destroy(this.gameObject);

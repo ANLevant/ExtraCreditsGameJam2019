@@ -5,20 +5,24 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	public LoopableAudio loopableAudio;
-	float speed;
+	public Sprite  Damage2;
+	public Sprite  Damage1;
+	public int health =3;
 	public bool isInSafeLane;
 	public bool isInFastLane;
 	public bool isInChallengeRoom;
 	public bool isJumping;
-	Rigidbody2D rigidBody2D;
 	public LayerMask safeLaneLayer;
 	public LayerMask fastLaneLayer;
 	public LayerMask challengeRoomLayer;
 	public JamBarScript jamBarScript;
+
+	private float speed;
+	private Rigidbody2D rigidBody2D;
 	private GameObject playerSprite;
-	public Sprite  Damage2;
-	public Sprite  Damage1;
-	public int health =3;	
+	private bool isInvinsible;
+	private float invinsibleCounter;
+	private float invinsibilityLapse = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -49,6 +53,15 @@ public class PlayerScript : MonoBehaviour {
 			speed = 0f;
 		}
 
+		if(isInvinsible){
+			invinsibleCounter += Time.deltaTime;
+		}
+
+		if(invinsibleCounter >= invinsibilityLapse){
+			invinsibleCounter = 0;
+			isInvinsible = false;
+		}
+
 		rigidBody2D.velocity = transform.up * speed;	
 	}
 
@@ -64,8 +77,9 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag=="Bullet" && ! isJumping){
+		if(other.gameObject.tag=="Bullet" && ! isJumping && !isInvinsible){
 			health--;
+			isInvinsible = true;
 		}
 		if(health == 2){
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage2;
