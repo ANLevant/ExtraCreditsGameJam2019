@@ -24,8 +24,6 @@ public class PlayerScript : MonoBehaviour {
 		isInSafeLane = Physics2D.Raycast(transform.position, transform.up, 0.1f, safeLaneLayer).collider != null;
 		isInFastLane = Physics2D.Raycast(transform.position, transform.up, 0.1f, fastLaneLayer).collider != null;
 		isInChallengeRoom = Physics2D.Raycast(transform.position, transform.up, 0.1f, challengeRoomLayer).collider != null;
-
-		Debug.Log(isInChallengeRoom);
 		
 		if(isInSafeLane)
 		{
