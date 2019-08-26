@@ -58,6 +58,8 @@
      <Compile Include="Assets\Source\Bullets\ChasingBullets.cs" />
      <Compile Include="Assets\Source\Bullets\DirectionalBulletScript.cs" />
      <Compile Include="Assets\Source\Bullets\SpiralBullet.cs" />
+     <Compile Include="Assets\Source\ChallengeRoom\ChallengeRoom.cs" />
+     <Compile Include="Assets\Source\ChallengeRoom\KillThemAllChallengeRoomScript.cs" />
      <Compile Include="Assets\Source\Enemies\ChaserScript.cs" />
      <Compile Include="Assets\Source\Enemies\EnemyBaseScript.cs" />
      <Compile Include="Assets\Source\Enemies\LevelControlScript.cs" />
