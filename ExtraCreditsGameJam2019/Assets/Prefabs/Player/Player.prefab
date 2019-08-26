@@ -490,7 +490,7 @@ MonoBehaviour:
     m_Bits: 512
   challengeRoomLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   jamBarScript: {fileID: 114358999498647688}
 --- !u!114 &114925380557728098
 MonoBehaviour:
