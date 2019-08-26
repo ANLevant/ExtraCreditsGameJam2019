@@ -13,8 +13,8 @@ public class LevelControlScript : MonoBehaviour {
 	void Start () {
 		ENEMY_PERCENTAGE_RATE = new Dictionary<float, EnemyBaseScript>();
 
-		for(int i = 0; i < enemyLists.Count; i++){
-			ENEMY_PERCENTAGE_RATE.Add(1/(i+1), enemyLists[i]);
+		for(float i = 0; i < enemyLists.Count; i++){
+			ENEMY_PERCENTAGE_RATE.Add(1/(i+1), enemyLists[(int)i]);
 		}	
 	}
 	
@@ -29,7 +29,7 @@ public class LevelControlScript : MonoBehaviour {
 		isSpawning = true;
 		WaitForSecondsRealtime waitForSecondsRealtime = new WaitForSecondsRealtime(1f);
 		yield return waitForSecondsRealtime;
-		if(PercentageUniformProbability() < 0.2){
+		if(PercentageUniformProbability() < 0.3){
 			float enemyToGeneratePercentageRange = PercentageUniformProbability();
 			for(int i = 0; i < ENEMY_PERCENTAGE_RATE.Count; i++){
 				float key = ENEMY_PERCENTAGE_RATE.Keys.ElementAt(i);

@@ -55,7 +55,8 @@ public abstract class EnemyBaseScript : MonoBehaviour {
 		if(timeCounter <= 0){
 			isFiring = true;
 			for(int i = 0; i < bulletCount; i++){
-				Instantiate(bullet, transform.position, Quaternion.identity, transform);
+				BulletBaseScript firedBullet = Instantiate(bullet, transform.position, Quaternion.identity).transform.Find("BulletSprite").GetComponent<BulletBaseScript>();
+				firedBullet.player = player;
 				WaitForSecondsRealtime waitForSecondsRealtime = new WaitForSecondsRealtime(0.1f);
 				yield return waitForSecondsRealtime;
 			}

@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChasingBullets : MonoBehaviour {
+public class ChasingBullets : BulletBaseScript {
+	public float speed;
 
 	// Use this for initialization
-	void Start () {
-		
+	new public void Start () {
+		base.Start();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	new public void Update () {
+		base.Update();
+		base.RotateTowards();
+		base.rigidBody2D.velocity = transform.up*speed;
 	}
 }

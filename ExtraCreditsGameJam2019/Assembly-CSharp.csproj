@@ -61,8 +61,11 @@
      <Compile Include="Assets\Source\Enemies\ChaserScript.cs" />
      <Compile Include="Assets\Source\Enemies\EnemyBaseScript.cs" />
      <Compile Include="Assets\Source\Enemies\LevelControlScript.cs" />
+     <Compile Include="Assets\Source\Enemies\OnFootEnemytScript.cs" />
      <Compile Include="Assets\Source\Enemies\Tourette.cs" />
+     <Compile Include="Assets\Source\Menu\MainMenu.cs" />
      <Compile Include="Assets\Source\Player\CameraChasePlayerScript.cs" />
+     <Compile Include="Assets\Source\Player\Heath.cs" />
      <Compile Include="Assets\Source\Player\JamBarScript.cs" />
      <Compile Include="Assets\Source\Player\PlayerScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">

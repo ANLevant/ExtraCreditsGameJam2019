@@ -452,7 +452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLists:
   - {fileID: 114035674592011910, guid: b5a67fc053ea248a1a5c777caecf09a9, type: 2}
-  - {fileID: 114017084500442020, guid: 1b5a54c5359f04d1684a059657f9da25, type: 2}
+  - {fileID: 114255649272171232, guid: 1b5a54c5359f04d1684a059657f9da25, type: 2}
+  - {fileID: 114430894278595906, guid: 75179e26ea950480993fbcbb262172d5, type: 2}
   player: {fileID: 114902134183179080}
 --- !u!114 &114358999498647688
 MonoBehaviour:
@@ -480,6 +481,7 @@ MonoBehaviour:
   isInSafeLane: 0
   isInFastLane: 0
   isInChallengeRoom: 0
+  isJumping: 0
   safeLaneLayer:
     serializedVersion: 2
     m_Bits: 256

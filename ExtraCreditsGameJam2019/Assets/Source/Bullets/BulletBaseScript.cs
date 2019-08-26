@@ -7,6 +7,7 @@ public class BulletBaseScript : MonoBehaviour {
 	protected Rigidbody2D rigidBody2D;
 
 	Renderer bulletRenderer;
+	public PlayerScript player;
 
 	// Use this for initialization
 	public void Start () {
@@ -28,6 +29,14 @@ public class BulletBaseScript : MonoBehaviour {
 		if(!bulletRenderer.isVisible){
 			Destroy(this.gameObject.transform.parent.gameObject);
 		}
+	}
+
+	protected void RotateTowards(){
+		var offset = -90f;
+     	Vector2 direction = player.transform.position - transform.position;
+    	direction.Normalize();
+    	float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;       
+    	transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
 	}
 
 }
