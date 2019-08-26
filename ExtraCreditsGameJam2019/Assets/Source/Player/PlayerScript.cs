@@ -67,7 +67,9 @@ public class PlayerScript : MonoBehaviour {
 		}
 		if(health == 1){
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage1;
-	
+		}
+		if(health == 0 ){
+			//game over
 		}
 	}
 

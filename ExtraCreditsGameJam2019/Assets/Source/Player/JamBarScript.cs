@@ -22,6 +22,9 @@ public class JamBarScript : MonoBehaviour {
 
 	void FixedUpdate() {
 		timeMeasure += Time.deltaTime;
+		if(actualSize <= 0){
+			//game over
+		}
 		if(actualSize > 0 && timeMeasure > 1){
 			SetSize((float)Math.Round(actualSize - 0.05, 2));
 			timeMeasure = 0;

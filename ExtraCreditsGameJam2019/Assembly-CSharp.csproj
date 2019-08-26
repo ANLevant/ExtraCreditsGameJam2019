@@ -65,7 +65,6 @@
      <Compile Include="Assets\Source\Enemies\Tourette.cs" />
      <Compile Include="Assets\Source\Menu\MainMenu.cs" />
      <Compile Include="Assets\Source\Player\CameraChasePlayerScript.cs" />
-     <Compile Include="Assets\Source\Player\Heath.cs" />
      <Compile Include="Assets\Source\Player\JamBarScript.cs" />
      <Compile Include="Assets\Source\Player\PlayerScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
