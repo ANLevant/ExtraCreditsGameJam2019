@@ -70,20 +70,20 @@ public class PlayerScript : MonoBehaviour {
 		if(Input.GetButton("Horizontal")){
 			transform.Rotate(0,0, -5f*Input.GetAxis("Horizontal"));
 		}
-		if(Input.GetButton("Jump")){
+		if(Input.GetButton("Jump") && !isJumping){
 			isJumping = true;
 			GetComponent<Animator>().SetBool("isJumping", true);
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag=="Bullet" && ! isJumping && !isInvinsible){
-			Heal(0.3);
-			isInvinsible = true;
-		}
-		if(other.gameObject.tag=="Jam" && ! isJumping){
+		if(other.gameObject.tag=="Bullet" && !isJumping && !isInvinsible){
 			health--;
 			isInvinsible = true;
+		}
+		else if(other.gameObject.tag=="Jam" && !isJumping){
+			Debug.Log("Found Jam!");
+			Heal(0.3);
 		}
 		if(health == 2){
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage2;

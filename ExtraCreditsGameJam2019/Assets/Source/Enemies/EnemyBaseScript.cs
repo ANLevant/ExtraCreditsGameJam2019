@@ -31,6 +31,9 @@ public abstract class EnemyBaseScript : MonoBehaviour {
 		if(hitPoints <= 0)
 		{
 			Destroy(this.gameObject);
+			for(int i =0; i < dropableList.Count; i++){
+				Instantiate(dropableList[i], transform.position, Quaternion.identity).GetComponent<JamScript>().player = player;
+			}
 		}
 		if(!isFiring){
 			StartCoroutine(Fire());

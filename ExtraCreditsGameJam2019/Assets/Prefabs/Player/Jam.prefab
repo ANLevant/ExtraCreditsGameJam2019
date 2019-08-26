@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50072263995011178}
   m_Layer: 0
   m_Name: Jam
-  m_TagString: Untagged
+  m_TagString: Jam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
