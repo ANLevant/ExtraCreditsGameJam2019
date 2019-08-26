@@ -38,7 +38,7 @@ public abstract class EnemyBaseScript : MonoBehaviour {
 		if(!isFiring){
 			StartCoroutine(Fire());
 		}
-		if(Vector2.Distance(player.transform.position, transform.position) > 10 && !isStatic){
+		if(Vector2.Distance(player.transform.position, transform.position) > 13 && !isStatic){
 			Destroy(this.gameObject);
 		}
 		if(isInvinsible){

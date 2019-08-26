@@ -16,7 +16,6 @@ public class KillThemAllChallengeRoomScript : ChallengeRoom {
 
 	public override bool FinishCondition(){
 		if(transform.childCount == 0){
-			Debug.Log("Finished!");
 			return true;
 		}
 		else{

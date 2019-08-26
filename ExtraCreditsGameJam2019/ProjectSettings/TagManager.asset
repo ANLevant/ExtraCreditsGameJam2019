@@ -8,6 +8,7 @@ TagManager:
   - SafeLane
   - Enemy
   - Jam
+  - Key
   layers:
   - Default
   - TransparentFX

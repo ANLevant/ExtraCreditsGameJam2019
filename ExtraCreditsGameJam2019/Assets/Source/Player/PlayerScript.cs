@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
 	public LoopableAudio loopableAudio;
+	public Sprite  Damage3;
 	public Sprite  Damage2;
 	public Sprite  Damage1;
 	public int health =3;
@@ -23,11 +24,13 @@ public class PlayerScript : MonoBehaviour {
 	private bool isInvinsible;
 	private float invinsibleCounter;
 	private float invinsibilityLapse = 1f;
+	private List<GameObject> foundKeys;
 
 	// Use this for initialization
 	void Start () {
 		rigidBody2D = GetComponent<Rigidbody2D>();	
-		playerSprite = transform.Find("PlayerSprite").gameObject;	
+		playerSprite = transform.Find("PlayerSprite").gameObject;
+		foundKeys = new List<GameObject>();
 	}
 
 	void FixedUpdate() {
@@ -47,6 +50,7 @@ public class PlayerScript : MonoBehaviour {
 			loopableAudio.ChangeMusic("FastLaneMusic");
 		}
 		else if(isInChallengeRoom){
+			speed = 5f;
 			loopableAudio.ChangeMusic("ChallengeRoomMusic");
 		}
 		else{
@@ -71,8 +75,7 @@ public class PlayerScript : MonoBehaviour {
 			transform.Rotate(0,0, -5f*Input.GetAxis("Horizontal"));
 		}
 		if(Input.GetButton("Jump") && !isJumping){
-			isJumping = true;
-			GetComponent<Animator>().SetBool("isJumping", true);
+			StartCoroutine(Jump());
 		}
 	}
 
@@ -82,12 +85,13 @@ public class PlayerScript : MonoBehaviour {
 			isInvinsible = true;
 		}
 		else if(other.gameObject.tag=="Jam" && !isJumping){
-			Debug.Log("Found Jam!");
 			Heal(0.3);
+		}
+		if(health == 3){
+			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage3;
 		}
 		if(health == 2){
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage2;
-	
 		}
 		if(health == 1){
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage1;
@@ -98,11 +102,22 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void Heal(double healAmmount){
+		health = 3;
 		jamBarScript.SetSize((float)(jamBarScript.actualSize+healAmmount));
 	}
 
+	public IEnumerator Jump(){
+		isJumping = true;
+		WaitForSecondsRealtime waitForSecondsRealtime = new WaitForSecondsRealtime(0.1f);
+		yield return waitForSecondsRealtime;
+		GetComponent<Animator>().SetBool("isJumping", true);
+	}
 	public void FinishJump(){
 		GetComponent<Animator>().SetBool("isJumping", false);
 		isJumping = false;
+	}
+
+	public void AddKey(GameObject key){
+		foundKeys.Add(key);
 	}
 }

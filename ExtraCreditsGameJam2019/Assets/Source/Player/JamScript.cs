@@ -11,7 +11,7 @@ public class JamScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Vector2.Distance(player.transform.position, transform.position) > 8){
+		if(Vector2.Distance(player.transform.position, transform.position) > 13){
 			Destroy(transform.gameObject);
 		}
 	}

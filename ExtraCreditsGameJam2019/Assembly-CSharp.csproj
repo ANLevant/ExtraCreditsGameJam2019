@@ -80,6 +80,7 @@
      <Compile Include="Assets\Source\Player\CameraChasePlayerScript.cs" />
      <Compile Include="Assets\Source\Player\JamBarScript.cs" />
      <Compile Include="Assets\Source\Player\JamScript.cs" />
+     <Compile Include="Assets\Source\Player\KeyScript.cs" />
      <Compile Include="Assets\Source\Player\PlayerScript.cs" />
      <None Include="Assets\2d-extras-2018.2\Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
      <None Include="Assets\2d-extras-2018.2\Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />

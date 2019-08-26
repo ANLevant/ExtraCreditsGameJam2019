@@ -25,7 +25,7 @@ public class JamBarScript : MonoBehaviour {
 		if(actualSize <= 0){
 			//game over
 		}
-		if(actualSize > 0 && timeMeasure > 1){
+		if(actualSize > 0 && timeMeasure > 3){
 			SetSize((float)Math.Round(actualSize - 0.05, 2));
 			timeMeasure = 0;
 		}
