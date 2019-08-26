@@ -14,9 +14,15 @@ public class PlayerScript : MonoBehaviour {
 	public LayerMask fastLaneLayer;
 	public LayerMask challengeRoomLayer;
 	public JamBarScript jamBarScript;
+	private GameObject playerSprite;
+	public Sprite  Damage2;
+	public Sprite  Damage3;
+	public int health =3;	
+
 	// Use this for initialization
 	void Start () {
-		rigidBody2D = GetComponent<Rigidbody2D>();		
+		rigidBody2D = GetComponent<Rigidbody2D>();	
+		playerSprite = transform.Find("PlayerSprite").gameObject;	
 	}
 
 	void FixedUpdate() {
@@ -52,7 +58,17 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		
+		if(other.gameObject.tag=="Bullet"){
+			health--;
+		}
+		if(health == 2){
+			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage3;
+	
+		}
+		if(health == 3){
+			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage2;
+	
+		}
 	}
 
 	void Heal(double healAmmount){
