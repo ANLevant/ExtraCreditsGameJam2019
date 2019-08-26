@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
+	public LoopableAudio loopableAudio;
 	float speed;
 	public bool isInSafeLane;
 	public bool isInFastLane;
@@ -34,10 +35,15 @@ public class PlayerScript : MonoBehaviour {
 		if(isInSafeLane)
 		{
 			speed = 2f;
+			loopableAudio.ChangeMusic("SafeLaneMusic");
 		}
-		else if(isInFastLane || isInChallengeRoom)
+		else if(isInFastLane)
 		{
 			speed = 5f;
+			loopableAudio.ChangeMusic("FastLaneMusic");
+		}
+		else if(isInChallengeRoom){
+			loopableAudio.ChangeMusic("ChallengeRoomMusic");
 		}
 		else{
 			speed = 0f;
