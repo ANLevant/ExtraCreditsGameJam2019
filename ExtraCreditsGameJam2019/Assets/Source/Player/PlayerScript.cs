@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour {
 	public bool isInSafeLane;
 	public bool isInFastLane;
 	public bool isInChallengeRoom;
+	public bool isJumping;
 	Rigidbody2D rigidBody2D;
 	public LayerMask safeLaneLayer;
 	public LayerMask fastLaneLayer;
@@ -45,6 +46,7 @@ public class PlayerScript : MonoBehaviour {
 			transform.Rotate(0,0, -5f*Input.GetAxis("Horizontal"));
 		}
 		if(Input.GetButton("Jump")){
+			isJumping = true;
 			GetComponent<Animator>().SetBool("isJumping", true);
 		}
 	}
@@ -59,6 +61,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public void FinishJump(){
 		GetComponent<Animator>().SetBool("isJumping", false);
+		isJumping = false;
 		Heal(0.5);
 	}
 }

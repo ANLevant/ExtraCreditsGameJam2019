@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBaseScript : MonoBehaviour {
+public abstract class EnemyBaseScript : MonoBehaviour {
 
 	public GameObject bullet;
 	public int bulletCount;
 	public int hitPoints;
 	public float fireRate;
-	private float timeCounter;
-	private bool isFiring;
+	protected float timeCounter;
+	protected bool isFiring;
 	public PlayerScript player;
 	public bool isStatic;
+	protected Rigidbody2D rigidBody2D;
 
 	// Use this for initialization
 	public void Start () {
+		rigidBody2D = GetComponent<Rigidbody2D>();
 		hitPoints = 3;
 	}
 	
@@ -33,13 +35,23 @@ public class EnemyBaseScript : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("Collide! "+other.gameObject.tag);
 		if(other.gameObject.tag == "Bullet"){
 			hitPoints--;
 		}
+		else if(other.gameObject.tag == "SafeLane"){
+			Destroy(this.gameObject);
+		}
 	}
 
-	IEnumerator Fire(){
+	protected void RotateTowards(){
+		var offset = -90f;
+     	Vector2 direction = player.transform.position - transform.position;
+    	direction.Normalize();
+    	float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;       
+    	transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
+	}
+
+	public virtual IEnumerator Fire(){
 		if(timeCounter <= 0){
 			isFiring = true;
 			for(int i = 0; i < bulletCount; i++){

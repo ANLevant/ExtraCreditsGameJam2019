@@ -12,6 +12,7 @@ public class SpiralBullet : BulletBaseScript {
 	}	
 	// Update is called once per frame
 	new public void Update () {
+		base.Update();
 		base.rigidBody2D.velocity = new Vector3(Mathf.Cos(spiralTurnVariable * circleSpeed)*(circleSpeed+xOscilation), Mathf.Sin(spiralTurnVariable * circleSpeed)*(circleSpeed+xOscilation), 0);
 
 		xOscilation += 0.3f;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletBaseScript : MonoBehaviour {
 
-	public Rigidbody2D rigidBody2D;
+	protected Rigidbody2D rigidBody2D;
 
 	Renderer bulletRenderer;
 
@@ -15,7 +15,10 @@ public class BulletBaseScript : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag == "SafeLane" || other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy"){
+		if(other.gameObject.tag == "SafeLane" || other.gameObject.tag == "Enemy"){
+			Destroy(this.gameObject.transform.parent.gameObject);
+		}
+		else if(other.gameObject.tag == "Player" && !other.gameObject.GetComponent<PlayerScript>().isJumping){
 			Destroy(this.gameObject.transform.parent.gameObject);
 		}
 	}
