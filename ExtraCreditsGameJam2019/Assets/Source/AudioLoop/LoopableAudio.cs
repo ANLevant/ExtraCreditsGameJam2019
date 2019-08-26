@@ -13,7 +13,9 @@ public class LoopableAudio : MonoBehaviour {
 	Dictionary<AudioClip, int[]> timeLoops = new Dictionary<AudioClip, int[]>();
 	Dictionary<string, AudioClip> audioClipsByName = new Dictionary<string, AudioClip>();
 	/**Perfect looping points for different songs:
-	* Smooth: 6 - 66 */
+	* Smooth: 6 - 66 
+	* Maniac Highway: 0 - 25
+	* Final Rush: 0 - 50*/
 	float loopStart, loopEnd;
 	
 	// Use this for initialization
