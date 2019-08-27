@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour {
 			loopableAudio.ChangeMusic("ChallengeRoomMusic");
 		}
 		else{
-			SceneManager.LoadScene(2, LoadSceneMode.Single);
+			SceneManager.LoadScene(4, LoadSceneMode.Single);
 		}
 
 		if(isStuck){
@@ -129,7 +129,7 @@ public class PlayerScript : MonoBehaviour {
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage1;
 		}
 		if(health == 0 ){
-			SceneManager.LoadScene(2, LoadSceneMode.Single);
+			SceneManager.LoadScene(4, LoadSceneMode.Single);
 		}
 	}
 

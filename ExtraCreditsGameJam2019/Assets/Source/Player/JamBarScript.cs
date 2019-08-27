@@ -24,7 +24,7 @@ public class JamBarScript : MonoBehaviour {
 	void FixedUpdate() {
 		timeMeasure += Time.deltaTime;
 		if(actualSize <= 0){
-			SceneManager.LoadScene(2, LoadSceneMode.Single);
+			SceneManager.LoadScene(4, LoadSceneMode.Single);
 		}
 		if(actualSize > 0 && timeMeasure > 2){
 			SetSize((float)Math.Round(actualSize - 0.05, 2));
