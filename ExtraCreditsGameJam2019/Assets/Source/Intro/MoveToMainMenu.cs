@@ -11,7 +11,7 @@ public class MoveToMainMenu : MonoBehaviour {
 
 	IEnumerator ToMainMenu(){
 		yield return new WaitForSeconds(5f);
-		SceneManager.LoadScene(3);
+		SceneManager.LoadScene(2);
 	}
 
 	private void Update() {
@@ -21,7 +21,7 @@ public class MoveToMainMenu : MonoBehaviour {
 	}
 
 	void ToMainMenuImmidiatley(){
-		SceneManager.LoadScene(3);
+		SceneManager.LoadScene(2);
 	}
 	
 }
