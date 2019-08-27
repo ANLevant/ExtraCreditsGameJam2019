@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -24,6 +25,7 @@ public class PlayerScript : MonoBehaviour {
 	private bool isInvinsible;
 	private float invinsibleCounter;
 	private float invinsibilityLapse = 1f;
+	private bool isStuck;
 	private List<GameObject> foundKeys;
 
 	// Use this for initialization
@@ -54,7 +56,11 @@ public class PlayerScript : MonoBehaviour {
 			loopableAudio.ChangeMusic("ChallengeRoomMusic");
 		}
 		else{
-			speed = 0f;
+			SceneManager.LoadScene(2, LoadSceneMode.Single);
+		}
+
+		if(isStuck){
+			speed = -10f;
 		}
 
 		if(isInvinsible){
@@ -79,6 +85,11 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
+	private void OnTriggerExit2D(Collider2D other) {
+		if(other.gameObject.tag=="Door"){
+			isStuck = false;
+		}
+	}
 	private void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag=="Bullet" && !isJumping && !isInvinsible){
 			health--;
@@ -87,6 +98,27 @@ public class PlayerScript : MonoBehaviour {
 		else if(other.gameObject.tag=="Jam" && !isJumping){
 			Heal(0.3);
 		}
+		else if(other.gameObject.tag=="Door"){
+			DoorScript doorScript = other.gameObject.GetComponent<DoorScript>();
+			bool hasKey = false;
+			if(doorScript != null){
+				for(int i = 0; i < foundKeys.Count; i++){
+					KeyScript keyScript = foundKeys[i].GetComponent<KeyScript>();
+					if(doorScript.keyColorToOpen == keyScript.color){
+						hasKey = true;
+						Destroy(keyScript.gameObject);
+					}
+				}
+
+				if(hasKey){
+					doorScript.Open();
+				}
+				else{
+					isStuck = true;
+				}
+			}
+		}
+
 		if(health == 3){
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage3;
 		}
@@ -97,7 +129,7 @@ public class PlayerScript : MonoBehaviour {
 			playerSprite.GetComponent<SpriteRenderer>().sprite = Damage1;
 		}
 		if(health == 0 ){
-			//game over
+			SceneManager.LoadScene(2, LoadSceneMode.Single);
 		}
 	}
 

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 public class JamBarScript : MonoBehaviour {
@@ -23,9 +24,9 @@ public class JamBarScript : MonoBehaviour {
 	void FixedUpdate() {
 		timeMeasure += Time.deltaTime;
 		if(actualSize <= 0){
-			//game over
+			SceneManager.LoadScene(2, LoadSceneMode.Single);
 		}
-		if(actualSize > 0 && timeMeasure > 3){
+		if(actualSize > 0 && timeMeasure > 2){
 			SetSize((float)Math.Round(actualSize - 0.05, 2));
 			timeMeasure = 0;
 		}

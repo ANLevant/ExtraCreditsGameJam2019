@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Jam
   - Key
+  - Door
   layers:
   - Default
   - TransparentFX
