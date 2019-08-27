@@ -11,17 +11,17 @@ public class MoveToMainMenu : MonoBehaviour {
 
 	IEnumerator ToMainMenu(){
 		yield return new WaitForSeconds(5f);
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene(3);
 	}
 
 	private void Update() {
 		if(Input.anyKey){
-			ToMainMenu();
+			ToMainMenuImmidiatley();
 		}
 	}
 
 	void ToMainMenuImmidiatley(){
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene(3);
 	}
 	
 }
