@@ -99,7 +99,7 @@ public class PlayerScript : MonoBehaviour {
 			Heal(0.3);
 		}
 		else if(other.gameObject.tag=="Door"){
-			DoorScript doorScript = other.gameObject.GetComponent<DoorScript>();
+			DoorScript doorScript = other.transform.parent.gameObject.GetComponent<DoorScript>();
 			bool hasKey = false;
 			if(doorScript != null){
 				for(int i = 0; i < foundKeys.Count; i++){
