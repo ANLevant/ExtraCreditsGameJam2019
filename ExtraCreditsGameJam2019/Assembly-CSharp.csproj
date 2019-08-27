@@ -80,9 +80,11 @@
      <Compile Include="Assets\Source\Intro\DontDestroy.cs" />
      <Compile Include="Assets\Source\Intro\GameIntro.cs" />
      <Compile Include="Assets\Source\Intro\MoveToMainMenu.cs" />
+     <Compile Include="Assets\Source\Menu\ClickSound.cs" />
      <Compile Include="Assets\Source\Menu\MainMenu.cs" />
      <Compile Include="Assets\Source\Player\CameraChasePlayerScript.cs" />
      <Compile Include="Assets\Source\Player\DoorScript.cs" />
+     <Compile Include="Assets\Source\Player\GameOverReturnToMenu.cs" />
      <Compile Include="Assets\Source\Player\JamBarScript.cs" />
      <Compile Include="Assets\Source\Player\JamScript.cs" />
      <Compile Include="Assets\Source\Player\KeyScript.cs" />

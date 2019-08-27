@@ -20,7 +20,7 @@ public class DoorScript : MonoBehaviour {
 	public void Open(){
 		Destroy(transform.gameObject);
 		if(isDoorToNextLevel){
-			SceneManager.LoadScene(3, LoadSceneMode.Single);
+			SceneManager.LoadScene(5, LoadSceneMode.Single);
 		}
 	}
 }

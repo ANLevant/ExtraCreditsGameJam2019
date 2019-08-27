@@ -324,6 +324,7 @@ GameObject:
   - component: {fileID: 1849564731}
   - component: {fileID: 1849564730}
   - component: {fileID: 1849564732}
+  - component: {fileID: 1849564733}
   m_Layer: 0
   m_Name: EndgameAnimation
   m_TagString: Untagged
@@ -408,3 +409,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1849564733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1849564729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb6fb18ce44d4887b5cb09070162aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
