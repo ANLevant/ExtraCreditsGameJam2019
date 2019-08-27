@@ -134,7 +134,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,7 +143,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1637295f6d2334d5e914d8a61e67d623
+      spriteID: 869914ad4159b465e95006bfc3316388
       vertices: []
       indices: 
       edges: []
@@ -152,9 +152,9 @@ TextureImporter:
       name: gameover sprite sheet_1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 201
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e87f400fff8294f209f2e0a4e5cd1e89
+      spriteID: e3215c20413e24550a566fdedab8376c
       vertices: []
       indices: 
       edges: []
@@ -172,9 +172,9 @@ TextureImporter:
       name: gameover sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 400
+        x: 402
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -183,7 +183,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9deb157b3cd84183b932f6b8d6a4723
+      spriteID: 5ca50896e06bd429485224faa7cbcee6
       vertices: []
       indices: 
       edges: []
@@ -192,9 +192,9 @@ TextureImporter:
       name: gameover sprite sheet_3
       rect:
         serializedVersion: 2
-        x: 600
+        x: 603
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,7 +203,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a7ed4e43f3c40219c073f12f7f8cef
+      spriteID: 0cb119efc0a7343d9b2d2259bd4c5090
       vertices: []
       indices: 
       edges: []
@@ -212,9 +212,9 @@ TextureImporter:
       name: gameover sprite sheet_4
       rect:
         serializedVersion: 2
-        x: 800
+        x: 804
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -223,7 +223,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885a080ccc07f4927b1ab24a7869a9a2
+      spriteID: da8c3507a1d6644e3a11b3b167285076
       vertices: []
       indices: 
       edges: []
@@ -232,9 +232,9 @@ TextureImporter:
       name: gameover sprite sheet_5
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1005
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -243,7 +243,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 754d4c3fe377747fab10f49feffce8e3
+      spriteID: fe97e629822d24b85a3c7457f958dfc6
       vertices: []
       indices: 
       edges: []
@@ -252,9 +252,9 @@ TextureImporter:
       name: gameover sprite sheet_6
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1206
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -263,7 +263,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 491b153af3de7493f85410e6f2e20799
+      spriteID: ec454a7eb73e84b8d946a4994ba07d32
       vertices: []
       indices: 
       edges: []
@@ -272,9 +272,9 @@ TextureImporter:
       name: gameover sprite sheet_7
       rect:
         serializedVersion: 2
-        x: 1400
+        x: 1407
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -283,7 +283,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7f7ba0ea0051484daf2c640a7cdddf5
+      spriteID: ddc04e99de81e44bab115a17c7a5fec8
       vertices: []
       indices: 
       edges: []
@@ -292,9 +292,9 @@ TextureImporter:
       name: gameover sprite sheet_8
       rect:
         serializedVersion: 2
-        x: 1600
+        x: 1608
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -303,7 +303,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ac7e416480740b38c13b1799f50f12
+      spriteID: 9d6ccf53a3b3d4c719d669c55318e2e7
       vertices: []
       indices: 
       edges: []
@@ -312,9 +312,9 @@ TextureImporter:
       name: gameover sprite sheet_9
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 1809
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -323,7 +323,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea502b4803dd14f2abaf326f600f01e0
+      spriteID: cbe8eaa57b8f949caabf98f9af9aa791
       vertices: []
       indices: 
       edges: []
@@ -332,9 +332,9 @@ TextureImporter:
       name: gameover sprite sheet_10
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 2010
         y: 0
-        width: 200
+        width: 201
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -343,27 +343,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67d304384c752419ea3ddcc32e5c3e38
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gameover sprite sheet_11
-      rect:
-        serializedVersion: 2
-        x: 2200
-        y: 0
-        width: 200
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f726f0ba9178b4fa08275f31676362ef
+      spriteID: 04104de93befd44cca694940fdd688f3
       vertices: []
       indices: 
       edges: []
